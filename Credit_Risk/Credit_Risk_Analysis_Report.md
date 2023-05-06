@@ -8,13 +8,13 @@ In this section, describe the analysis you completed for the machine learning mo
 * A dataset containing lending data and loan status data was used.
 * The Dependent Variable was allocated to 'loan status' (y_value). The Independent Variables were made up of 'loan size', 'interest rate', 'borrower Income', 'debt to income', 'num of accounts', 'derogatory_marks' and 'total debt (X_value).
 * Stages of the machine learning process were as follows, 
-      * Import the required modules.
-      * Read in the lending data file and create a DataFrame.
-      * Extract the y_values from the DataFrame.
-      * Split the data into Training and Test datasets.
-      * Create a logistic regression model.
-      * Predict and evaluate the model.
-      * Generate a Classification Report
+      * Import the required modules.<br>
+      * Read in the lending data file and create a DataFrame.<br>
+      * Extract the y_values from the DataFrame.<br>
+      * Split the data into Training and Test datasets.<br>
+      * Create a logistic regression model.<br>
+      * Predict and evaluate the model.<br>
+      * Generate a Classification Report<br>
      
 * A Logistic Regression Model was used to determine the results.
 
@@ -30,7 +30,12 @@ In this section, describe the analysis you completed for the machine learning mo
 
 
 * Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+  * A Logistic Regression Model gave the following results using the randomly over sampled data
+
+![ROS Data Balanced Accuracy Score](Images/BAS_OverSampled_Data.png)
+
+![ROS Classification Report](Images/class_report_oversampled_data.png)
+<br>
 
 ## Summary
 
