@@ -28,7 +28,13 @@ In this section, describe the analysis you completed for the machine learning mo
 ![Classification Report](Images/class_report_original_data.png)
 <br>
 
-
+The machine learning model results on the original data are as follows.
+  * Accuracy score of 0.99, indicating it correctly predicted 99% of all instances. 
+  * A precision score of 1.00 for the healthy loan class and 0.85 for the high-risk loan class. 
+  * The recall score for the healthy loan class is 0.99 and for the high-risk loan class is 0.91. 
+  * The F1-scores for healthy loan and high-risk loan classes are 1.00 and 0.88, respectively. 
+  * Overall, the model performs well, with slightly lower precision and recall scores for high-risk loans, but still effective in identifying them.
+<br>
 * Machine Learning Model 2:
   * A Logistic Regression Model gave the following results using the randomly over sampled data
 
@@ -37,16 +43,17 @@ In this section, describe the analysis you completed for the machine learning mo
 ![ROS Classification Report](Images/class_report_oversampled_data.png)
 <br>
 
+The machine learning model results for the Over sampled data are as follows. 
+* Accuracy score of 0.99, indicating it correctly predicted 99% of all instances. 
+* A precision score of 1.00 for the healthy loan class and 0.84 for the high-risk loan class. 
+* The recall score for the healthy loan class is 0.99 and for the high-risk loan class is also 0.99. 
+* The F1-scores for healthy loan and high-risk loan classes are 1.00 and 0.91, respectively. 
+* Overall, the model performs well, with slightly lower precision score for high-risk loans but high recall scores for both classes, indicating that the model is effective in identifying high-risk loans.
+
 ## Summary
 
-Summarise the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+Both models perform similarly well based on the performance metrics. including accuracy, precision, recall, f1-score, and balanced accuracy. However, with the original dataset having a significant class imbalance, the second model's use of RandomOverSampler to resample the training data and balance the class distribution appears advantageous in improving its performance on the high-risk loan class.
 
-We can see that the logistic regression model performs very well at predicting  the `0` (healthy loan), with a precision, and F1-score of 1.00 and recall of 0.99, indicating that it correctly identifies all healthy loans.
+The resampled data gave us improved results on the recall and f1-scores as well as the balanced accuracy score.
 
-With a precision sore of 0.85 For the `1` (high-risk loan) the logistic regression model performs well in identifying high-risk loans, but with room for improvement, especially given the highly imbalanced nature of the dataset.
-
-*If you do not recommend any of the models, please justify your reasoning.*
-
-Overall i would recommend this model but would suggest that further testing is required. I would recommend using a dataset with a more even spread of healthy and high-risk loans or atleast a higher amount of high-risk loans.
+Of the two models the resampled data does appear to be the better model option. The original dataset had a significant class imbalance, with only 2,500 high-risk loans compared to 75,036 healthy loans.  The use of RandomOverSampler to resample the training data can help address this imbalance by generating additional synthetic samples of the minority class, which can improve the model's performance in predicting the high-risk loan class.
