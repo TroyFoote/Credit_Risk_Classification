@@ -35,6 +35,7 @@ The machine learning model results on the original data are as follows.
   * The F1-scores for healthy loan and high-risk loan classes are 1.00 and 0.88, respectively. 
   * Overall, the model performs well, with slightly lower precision and recall scores for high-risk loans, but still effective in identifying them.
 <br>
+
 * Machine Learning Model 2:
   * A Logistic Regression Model gave the following results using the randomly over sampled data
 
